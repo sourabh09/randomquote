@@ -11,6 +11,8 @@ function getData() {
 
               $('#twitterlink').attr("href","https://twitter.com/share?text="+data.content+" - "+data.author);
               $('#whatsapplink').attr("href","whatsapp://send?text="+data.content+" - "+data.author);
+              $('.dummy').css("display","none");
+              $('.social').fadeIn();
               //$('#facebooklink').attr("href","https://www.facebook.com/sharer/sharer.php?u="+data.content+" - "+data.author);
             }
          
@@ -24,4 +26,24 @@ function copyToClipboard(element) {
   $temp.val($(element).text()).select();
   document.execCommand("copy");
   $temp.remove();
+  showMessage();
+
+}
+
+function showMessage(){
+
+  $('header').text("COPIED!!");
+  $('header').css("color","#FFF");
+  $('header').css("backgroundColor","#f0002f");
+
+  setTimeout(hideMessage, 1000)
+}
+
+function hideMessage(){
+
+  $('header').text("RANDOM QUOTE");
+  $('header').css("color","#f0002f");
+  $('header').css("backgroundColor","#000");
+
+
 }

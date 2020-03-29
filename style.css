@@ -21,6 +21,11 @@ margin-bottom:10px;
 text-align: left;
 font-family: 'Bebas Neue', cursive;
 color: #f0002f;
+position: fixed;
+width: 100%;
+}
+.blankdiv{
+  height: 50px;
 }
 
 .fa{
@@ -32,6 +37,7 @@ color: #f0002f;
 .info{
   height: 30px;
 }
+
 .dummy{
   position: absolute;
 top: 50%;

@@ -7,10 +7,10 @@ function getData() {
 
               console.log(data);
 
-              $('#advice').html(data.content+"<br>"+"<span>"+"- "+data.author+"</span>");
+              $('#advice').html('" '+data.content+' "'+"<br>"+"<span>"+"- "+data.author+"</span>");
 
-              $('#twitterlink').attr("href","https://twitter.com/share?text="+data.content+" - "+data.author);
-              $('#whatsapplink').attr("href","whatsapp://send?text="+data.content+" - "+data.author);
+              $('#twitterlink').attr("href","https://twitter.com/share?text="+'" '+data.content+' "'+" - "+data.author);
+              $('#whatsapplink').attr("href","whatsapp://send?text="+'" '+data.content+' "'+" - "+data.author);
               $('.dummy').css("display","none");
               $('.social').fadeIn();
               //$('#facebooklink').attr("href","https://www.facebook.com/sharer/sharer.php?u="+data.content+" - "+data.author);

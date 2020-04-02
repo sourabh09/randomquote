@@ -1,5 +1,7 @@
 function getData() {
 
+          $(".fa-refresh").addClass("spin");
+
         $.ajax({
             url: 'https://api.quotable.io/random',
             
@@ -7,12 +9,15 @@ function getData() {
 
               console.log(data);
 
+
               $('#advice').html('"'+data.content+'"'+"<br>"+"<span>"+"- "+data.author+"</span>");
 
               $('#twitterlink').attr("href","https://twitter.com/share?text="+'"'+data.content+'"'+" - "+data.author);
               $('#whatsapplink').attr("href","whatsapp://send?text="+'"'+data.content+'"'+" - "+data.author);
               $('.dummy').css("display","none");
               $('.social').fadeIn();
+              $(".fa-refresh").removeClass("spin");
+
               //$('#facebooklink').attr("href","https://www.facebook.com/sharer/sharer.php?u="+data.content+" - "+data.author);
             }
          
@@ -47,3 +52,4 @@ function hideMessage(){
 
 
 }
+
